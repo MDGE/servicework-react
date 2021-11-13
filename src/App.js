@@ -4,7 +4,8 @@ function App() {
   const [result,setResult] = React.useState({name:'A',from:'B'})
   useEffect(()=>{
     http.get('/custom/api').then((res)=>{
-      setResult(res.data.result)
+      console.log(res)
+      // setResult(res.data.result)
     })
   },[])
   
